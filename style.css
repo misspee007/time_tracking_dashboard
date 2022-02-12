@@ -28,15 +28,8 @@ body {
   background: var(--very-dark-blue);
   color: #ffffff;
   font-family: "Rubik", sans-serif;
-  padding: 4rem 1.5rem 1rem 1.5rem;
+  padding: 5rem 1.5rem 1rem 1.5rem;
 
-}
-
-.wrapper {
-}
-
-header {
-  /* max-width: 345px; */
 }
 
 .header-top {
@@ -156,8 +149,112 @@ main .card-top {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+/* Tablet */
+@media  only screen and (min-width: 768px){
+  body {
+  padding: 8rem 5rem 2rem 5rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    row-gap: 0.5rem;
+  }
+
+  header {
+    margin-bottom: 1rem;
+  }
+  .header-top {
+    justify-content:flex-start;
+  }
+  .header-top .title {
+    margin-left: 2rem;
+  }
+
+  .attribution {
+    margin-top: 5rem;
+  }
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 1280px) {
+  body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 1.5rem;
+    max-width: 80%;
+    padding: 1rem 3rem 0 3rem;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 3;
+    justify-content: space-between;
+  }
+  .header-top .title {
+    margin: 0 0 2rem 0;
+  }
+  .title > :last-child {
+    font-size: 32px;
+  }
+
+  .card-content {
+    padding: 30px 35px;
+  }
+  .content-top {
+    margin-bottom: 15px;
+  }
+
+  .card-desc {
+    flex-direction: column;
+  }
+  .card-desc .present {
+    font-size: 45px;
+  }
+  .card-desc .past {
+    line-height: 1.5rem;
+  }
+
+  .header-bottom {
+    flex-direction: column;
+    line-height: 2rem;
+  }
+  .header-bottom h2, .card-content h3 {
+    font-size: 16px;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 30px;
+    margin: 0;
+  }
 }
