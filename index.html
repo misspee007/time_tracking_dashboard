@@ -15,7 +15,7 @@
 
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
-  <body>
+  <body onload="onBtnClick('daily')"> <!-- sets daily report as default -->
     <div class="wrapper">
       <header>
         <div class="header-top">
@@ -26,10 +26,10 @@
           </div>
         </div>
         <div class="header-bottom">
-          <h2>Daily</h2>
-          <h2>Weekly</h2>
-          <h2>Monthly</h2>
-        </div>
+          <button class="btn" id="daily" onclick="onBtnClick('daily')">Daily</button>
+          <button class="btn" id="weekly" onclick="onBtnClick('weekly')">Weekly</button>
+          <button class="btn" id="monthly" onclick="onBtnClick('monthly')">Monthly</button>
+        </div>  
       </header>
 
       <main>
@@ -41,8 +41,8 @@
               <img src="/images/icon-ellipsis.svg" alt="ellipsis icon" />
             </div>
             <div class="card-desc">
-              <p class="present">32hrs</p>
-              <p class="past">Previous - 7hrs</p>
+              <p class="present" id="currentWork"></p>
+              <p class="past" id="prevWork"></p>
             </div>
           </div>
         </section>
@@ -54,8 +54,8 @@
               <img src="/images/icon-ellipsis.svg" alt="ellipsis icon" />
             </div>
             <div class="card-desc">
-              <p class="present">1hr</p>
-              <p class="past">Previous - 2hrs</p>
+              <p class="present" id="currentPlay"></p>
+              <p class="past" id="prevPlay"></p>
             </div>
           </div>
         </section>
@@ -67,8 +67,8 @@
               <img src="/images/icon-ellipsis.svg" alt="ellipsis icon" />
             </div>
             <div class="card-desc">
-              <p class="present">0hrs</p>
-              <p class="past">Previous - 1hr</p>
+              <p class="present" id="currentStudy"></p>
+              <p class="past" id="prevStudy"></p>
             </div>
           </div>
         </section>
@@ -80,8 +80,8 @@
               <img src="/images/icon-ellipsis.svg" alt="ellipsis icon" />
             </div>
             <div class="card-desc">
-              <p class="present">1hr</p>
-              <p class="past">Previous - 1hr</p>
+              <p class="present" id="currentExercise"></p>
+              <p class="past" id="prevExercise"></p>
             </div>
           </div>
         </section>
@@ -93,8 +93,8 @@
               <img src="/images/icon-ellipsis.svg" alt="ellipsis icon" />
             </div>
             <div class="card-desc">
-              <p class="present">1hr</p>
-              <p class="past">Previous - 3hrs</p>
+              <p class="present" id="currentSocial"></p>
+              <p class="past" id="prevSocial"></p>
             </div>
           </div>
         </section>
@@ -106,8 +106,8 @@
               <img src="/images/icon-ellipsis.svg" alt="ellipsis icon" />
             </div>
             <div class="card-desc">
-              <p class="present">0hrs</p>
-              <p class="past">Previous - 1hr</p>
+              <p class="present" id="currentSelfcare"></p>
+              <p class="past" id="prevSelfcare"></p>
             </div>
           </div>
         </section>
@@ -120,5 +120,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">PDA</a>.
     </footer>
+
+    <script src="./app.js" ></script>
   </body>
 </html>
