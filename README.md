@@ -10,12 +10,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
 
 ## Overview
 
@@ -29,12 +24,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](images/desktop_screenshot.png)
+
+![](images/mobilee_screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-html-css-and-vanilla-js-1CfSJYlgl](https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-html-css-and-vanilla-js-1CfSJYlgl)
+- Live Site URL: [https://misspee007.github.io/time_tracking_dashboard/](https://misspee007.github.io/time_tracking_dashboard/)
 
 ## My process
 
@@ -46,18 +43,8 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com)
-- [Example resource 2](https://www.example.com) 
-
 ## Author
 
 - Website - [Precious Abubakar](https://misspee007.github.io/portfolio_)
 - Frontend Mentor - [@misspee007](https://www.frontendmentor.io/profile/misspee007)
 - Twitter - [@_pdan](https://www.twitter.com/_pdan)
-
-
-## Acknowledgments
-
