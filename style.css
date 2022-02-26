@@ -260,7 +260,7 @@ main .card-top {
     flex-direction: column;
   }
   .card-desc .present {
-    font-size: 45px;
+    font-size: 35px;
   }
   .card-desc .past {
     line-height: 1.5rem;
