@@ -1,4 +1,3 @@
-// 1. get elements by id and store them in variables
 let currentWork = document.getElementById("currentWork");
 let prevWork = document.getElementById("prevWork");
 
@@ -19,8 +18,7 @@ let prevSelfcare = document.getElementById("prevSelfcare");
 
 
 // onclick event handler
-const onBtnClick = (schedule) => {
-  // 2. on click, fetch json data
+const onBtnClick = (report) => {
   const data = fetch("./data.json")
   .then((response) => {
     return response.json();
@@ -34,15 +32,9 @@ const onBtnClick = (schedule) => {
     const monthlyData = data.map(i => {
       return i.timeframes.monthly;
     })
-    console.log(dailyData);
-
-
-    //get the titles
-    // let titlesArr = data.map(i => {return i.title})
-    // console.log(titlesArr);
     
-  // 3. check which button (daily, weekly or monthly) is active, then render the corresponding data
-    if (schedule === 'daily') {
+    //check which button (daily, weekly or monthly) is active, then render the corresponding data
+    if (report === 'daily') {
       currentWork.innerHTML = `${dailyData[0].current}${dailyData[0].current === 1 ? "hr" : "hrs"}`;
       prevWork.innerHTML = `Previous - ${dailyData[0].previous}${dailyData[0].previous === 1 ? "hr" : "hrs"}`;
       currentPlay.innerHTML = `${dailyData[1].current}${dailyData[1].current === 1 ? "hr" : "hrs"}`;
@@ -56,7 +48,7 @@ const onBtnClick = (schedule) => {
       currentSelfcare.innerHTML = `${dailyData[5].current}${dailyData[5].current === 1 ? "hr" : "hrs"}`;
       prevSelfcare.innerHTML = `Previous - ${dailyData[5].previous}${dailyData[5].previous === 1 ? "hr" : "hrs"}`;
     }
-    if (schedule === 'weekly'){
+    if (report === 'weekly'){
       currentWork.innerHTML = `${weeklyData[0].current}${weeklyData[0].current === 1 ? "hr" : "hrs"}`;
       prevWork.innerHTML = `Previous - ${weeklyData[0].previous}${weeklyData[0].current === 1 ? "hr" : "hrs"}`;
       currentPlay.innerHTML = `${weeklyData[1].current}${weeklyData[1].current === 1 ? "hr" : "hrs"}`;
@@ -70,7 +62,7 @@ const onBtnClick = (schedule) => {
       currentSelfcare.innerHTML = `${weeklyData[5].current}${weeklyData[5].current === 1 ? "hr" : "hrs"}`;
       prevSelfcare.innerHTML = `Previous - ${weeklyData[5].previous}${weeklyData[5].current === 1 ? "hr" : "hrs"}`;
     }
-    if (schedule === 'monthly'){
+    if (report === 'monthly'){
       currentWork.innerHTML = `${monthlyData[0].current}${monthlyData[0].current === 1 ? "hr" : "hrs"}`;
       prevWork.innerHTML = `Previous - ${monthlyData[0].previous}${monthlyData[0].current === 1 ? "hr" : "hrs"}`;
       currentPlay.innerHTML = `${monthlyData[1].current}${monthlyData[1].current === 1 ? "hr" : "hrs"}`;
